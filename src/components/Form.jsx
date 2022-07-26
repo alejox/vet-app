@@ -1,4 +1,12 @@
+import {useState, useEffect } from 'react';
+
 const Form = () => {
+  const [name, setName] = useState('');
+
+
+
+
+  
   return (
     <div className="md:w-1/2 lg:w-2/5">
       <h2 className="font-black text-3xl text-center">Patient Follow-up</h2>
@@ -14,7 +22,10 @@ const Form = () => {
           id="petName"
           className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" 
           type="text" 
-          placeholder="The pet's name" />
+          placeholder="The pet's name" 
+          value={name}
+          onChange={e => setName(e.target.value)}
+          />
         </div>
 
         <div className="mb-5">
